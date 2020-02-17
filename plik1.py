@@ -1,9 +1,8 @@
-Django     2.2.5
-Pillow     6.1.0
-pip        19.2.3
-pytz       2019.2
-setuptools 41.2.0
-sqlparse   0.3.0
+django-tables2-2.2.1
+https://django-tables2.readthedocs.io/en/latest/pages/tutorial.html
+
+
+
 
 python3 -m pip install --upgrade pip
 pip install -r requirements.txt

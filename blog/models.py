@@ -18,5 +18,8 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+# tutorial/models.py https://django-tables2.readthedocs.io/en/latest/pages/tutorial.html
+class Person(models.Model):
+    name = models.CharField(max_length=100, verbose_name="full name")
 
 
