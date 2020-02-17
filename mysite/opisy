@@ -1,7 +1,7 @@
 django-tables2-2.2.1
 https://django-tables2.readthedocs.io/en/latest/pages/tutorial.html
 https://rk.edu.pl/pl/djangoindex/
-
+https://netwizards.pl/zasoby/darmowe-polskie-czcionki-google-fonts-z-polskimi-znakami/
 
 
 
@@ -36,4 +36,6 @@ python manage.py migrate blog
 #admini konto
 python manage.py createsuperuser
 #panel -- https://docs.djangoproject.com/en/2.0/ref/contrib/admin/
+------
 
+https://startbootstrap.com/themes/clean-blog/
