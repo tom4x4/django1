@@ -1,5 +1,6 @@
 django-tables2-2.2.1
 https://django-tables2.readthedocs.io/en/latest/pages/tutorial.html
+https://rk.edu.pl/pl/djangoindex/
 
 
 
