@@ -23,6 +23,7 @@ def post_list(request):
        ala=request.user
        x=[]
        edek=User.objects.values_list('password').get(username='edek')
+       edek2=User.objects.filter(username='edek')
 
 
 
