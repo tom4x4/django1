@@ -5,7 +5,7 @@ from django.utils import timezone
 from .models import Person
 from .models import Post
 import time
-import bootstrap4 as bt
+
 
 
 class PersonListView(ListView):

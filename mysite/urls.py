@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("people/", PersonListView.as_view()),
     path('', include('blog.urls')),
+
 ]
 
