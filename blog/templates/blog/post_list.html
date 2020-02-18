@@ -9,6 +9,11 @@
                         <h2><a href="">{{ post.title }}</a></h2>
                         <p>{{ post.text|linebreaksbr }}</p>
                         <p>{{ czas }}</p>
+                        <p>{{ ala }}</p>
+                        {% for e in edek %}
+                        <p>{{ e }}</p>
+                        {% endfor %}
+
                     </div>
                 {% endfor %}
 {% endblock %}

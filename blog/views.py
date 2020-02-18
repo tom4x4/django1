@@ -5,6 +5,7 @@ from django.utils import timezone
 from .models import Person
 from .models import Post
 import time
+from django.contrib.auth.models import User
 
 
 
@@ -18,7 +19,27 @@ def czas():
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/post_list.html', {'posts': posts, 'czas':czas()})
+    if request.user.is_authenticated:
+       ala=request.user
+       x=[]
+       edek=User.objects.values_list('password').get(username='edek')
+
+
+
+
+
+
+
+
+
+
+
+
+    else:
+       ala="Nie ma kota"
+
+    return render(request, 'blog/post_list.html', {'posts': posts, 'czas':czas(),'ala' : ala, 'edek' : edek})
+
 
 
 
