@@ -8,12 +8,35 @@
                         </div>
                         <h2><a href="">{{ post.title }}</a></h2>
                         <p>{{ post.text|linebreaksbr }}</p>
-                        <p>{{ czas }}</p>
-                        <p>{{ ala }}</p>
-                        {% for e in edek %}
-                        <p>{{ e }}</p>
-                        {% endfor %}
 
                     </div>
-                {% endfor %}
+
+{% endfor %}
+
+<div>
+
+
+    <h1>Tworzenie konta</h1>
+                            <form action="." method="post">
+                         {% csrf_token %}
+                         {{ form.as_p }}
+                         <label for="guz1">First name:</label><br>
+                         <input type="submit" id='guz1' name='guzik' value="KONTO" >
+                            </form>
+
+</div>
+<div>
+    <p>{{ request.META.REMOTE_ADDR }}</p>
+    <p>{{ czas }}</p>
+    <p>{{ ala }}</p>
+    <p>{{ edek }}</p>
+    <p>{{ edek2 }}</p>
+
+
+
+
+</div>
+
+
+
 {% endblock %}
