@@ -1,8 +1,9 @@
 {% extends 'blog/base.html' %}
 
+
 {% block content %}
 {% for post in posts %}
-                    <div class="post">
+<div class="post" xmlns="http://www.w3.org/1999/html">
                         <div class="date">
                             {{ post.published_date }}
                         </div>
@@ -21,8 +22,11 @@
                          {% csrf_token %}
                          {{ form.as_p }}
                          <label for="guz1">First name:</label><br>
-                         <input type="submit" id='guz1' name='guzik' value="KONTO" >
+                                <button type="submit" class="btn btn-danger" value="danger" name="guzik">cos tam</button>
+                                <button type="submit" class="btn btn-primary btn-lg" value="primary" name="guzik">cos tam</button>
+                                <input type="text" class="form-control" placeholder="Username">
                             </form>
+
 
 </div>
 <div>
@@ -32,10 +36,12 @@
     <p>{{ edek }}</p>
     <p>{{ edek2 }}</p>
 
-
+ {% load humanize %}
+    <p>{{ liczba|apnumber}}</p>
 
 
 </div>
+
 
 
 

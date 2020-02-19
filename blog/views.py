@@ -9,6 +9,9 @@ from django.contrib.auth.models import User
 
 
 
+
+
+
 class PersonListView(ListView):
     model = Person
     template_name = 'blog/people.html'
@@ -25,13 +28,15 @@ def post_list(request):
        #edek2=User.objects.filter(username='edek')
        if request.method == "POST":
             #edek=request.META.get('REMOTE_ADDR')
-            edek2 = request.POST.get('guzik')
+            edek2 = request.POST['guzik']
        else:
            edek2 = 'zzzzzz'
 
+       liczba = 1
+
     else:
        ala="Nie ma kota"
-    return render(request, 'blog/post_list.html', {'posts': posts, 'czas':czas(),'ala' : ala, 'edek' : edek, 'edek2' : edek2})
+    return render(request, 'blog/post_list.html', {'posts': posts, 'czas':czas(),'ala' : ala, 'edek' : edek, 'edek2' : edek2, 'liczba' : liczba})
 
 
 
