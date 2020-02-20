@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<form action="/" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="text" class="form-control" placeholder="Username" name="username">
+<input type="password" class="form-control" placeholder="Passwords" name="password">
+<button type="submit" class="btn btn-primary btn-lg" value="primary" name="guzik">Wyślij</button>
+</form>
+<p>{{ zalogowany }}</p>
+
+
+
+{% endblock %}
