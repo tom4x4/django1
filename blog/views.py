@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.shortcuts import redirect
 
 from django.views.generic import ListView
 from django.utils import timezone
@@ -9,6 +10,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from .forms import DocumentForm
+
 
 
 class PersonListView(ListView):
@@ -66,7 +68,7 @@ def model_form_upload(request):
         form = DocumentForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('upload')
     else:
         form = DocumentForm()
     return render(request, 'blog/upload.html', {
