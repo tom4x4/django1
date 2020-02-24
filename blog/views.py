@@ -8,6 +8,7 @@ import time
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
+from .forms import DocumentForm
 
 
 class PersonListView(ListView):
@@ -60,7 +61,17 @@ def post_list(request):
         liczba = 2
     return render(request, 'blog/post_list.html', {'posts': posts, 'czas':czas(),'ala' : ala, 'edek' : edek, 'edek2' : edek2, 'liczba' : liczba})
 
-
+def model_form_upload(request):
+    if request.method == 'POST':
+        form = DocumentForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = DocumentForm()
+    return render(request, 'blog/upload.html', {
+        'form': form
+    })
 
 
 

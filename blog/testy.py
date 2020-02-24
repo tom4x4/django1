@@ -1,3 +1,7 @@
-dict={'ala':1,'edek':2}
-print (dict.keys())
-print(dict.get('ala'))
+from django import forms
+
+class UploadFileForm(forms.Form):
+    title = forms.CharField(max_length=50)
+    file = forms.FileField()
+
+    forms.FileField()
